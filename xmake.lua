@@ -1,4 +1,5 @@
-set_languages("gnu11")
+set_languages("c11", "cxx17")
+
 option("webrtc", {default = false, showmenu = true})
 add_rules("mode.releasedbg", "mode.release")
 
