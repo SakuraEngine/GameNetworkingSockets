@@ -1,0 +1,41 @@
+{
+    ["protobuf-cpp"] = {
+        sysincludedirs = [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\include]],
+        installdir = [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d]],
+        __requireconfs = {
+            configs = {
+                vs_runtime = "MT",
+                toolchains = "msvc"
+            }
+        },
+        linkdirs = [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\lib]],
+        libfiles = {
+            [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\lib\libprotobuf.lib]],
+            [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\lib\libprotobuf-lite.lib]],
+            [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\lib\libprotoc.lib]]
+        },
+        static = true,
+        version = "3.19.4",
+        envs = {
+            PATH = {
+                [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\bin]],
+                [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\bin]],
+                [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\c\cmake\3.24.2\5430022e3acc47008f94857b498c53c6\bin]]
+            }
+        },
+        __enabled = true,
+        links = "libprotobuf",
+        __requirestr = "protobuf-cpp"
+    },
+    openssl = {
+        __requirestr = "openssl",
+        __requireconfs = {
+            configs = ref("protobuf-cpp", "__requireconfs", "configs")
+        },
+        __enabled = false
+    },
+    abseil = {
+        __requirestr = "abseil",
+        __enabled = false
+    }
+}

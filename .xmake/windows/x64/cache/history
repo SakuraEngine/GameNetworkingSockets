@@ -1,0 +1,13 @@
+{
+    cmdlines = {
+        [[xmake l c:\Users\SaeruHikari\.vscode\extensions\tboox.xmake-vscode-2.0.6\assets\update_intellisense.lua .vscode]],
+        "xmake check",
+        [[xmake l c:\Users\SaeruHikari\.vscode\extensions\tboox.xmake-vscode-2.0.6\assets\explorer.lua]],
+        "xmake check",
+        "xmake check",
+        "xmake check",
+        "xmake f -m releasedbg --toolchain=msvc -c -y -v --policies=build.ccache:n",
+        "xmake check",
+        "xmake f -m releasedbg --toolchain=msvc -c -y -v --policies=build.ccache:n"
+    }
+}
