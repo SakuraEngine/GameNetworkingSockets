@@ -1,45 +1,61 @@
 {
-    find_package_windows_x64_fetch_package_system = {
-        abseil_b35a76ee5b4b43b1b4ec8048d08e311d_release_external = false
+    find_program_fetch_package_xmake = {
+        perl = [[C:\Program Files\Git\usr\bin\perl]],
+        cmake = [[C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake]],
+        nasm = false
     },
-    ["detect.sdks.find_vcpkgdir"] = false,
-    find_programver_fetch_package_system = {
+    ["lib.detect.has_flags"] = {
+        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe_19.35.32215_cxx__-nologo -m64_-Wno-attributes"] = false,
+        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe_19.35.32215_cc_cxflags_-nologo -m64_-TP"] = true,
+        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe_19.35.32215_cc_cxflags_-nologo -m64_-std:c11"] = false,
+        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe_19.35.32215_cxx_cxflags_-nologo -m64_-arch:SSE2"] = false,
+        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe_19.35.32215_cc_cxflags_-nologo -m64_-arch:SSE2"] = false,
+        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe_19.35.32215_cc_cxflags_-nologo -m64_cl_external_includedir"] = false,
+        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe_19.35.32215_cxx_cxflags_-nologo -m64_cl_external_includedir_experimental"] = false,
+        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe_19.35.32215_cc_cxflags_-nologo -m64_cl_external_includedir_experimental"] = false,
+        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe_19.35.32215_cxx_cxflags_-nologo -m64_-Wno-attributes"] = false,
+        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe_19.35.32215_cxx_cxflags_-nologo -m64_cl_external_includedir"] = false
+    },
+    find_program = {
+        ping = "ping",
+        ["pkg-config"] = false,
+        gzip = false,
+        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64\cl.exe]],
+        curl = [[D:\Program Files\xmake\winenv\bin\curl]],
+        ["7z"] = [[D:\Program Files\xmake\winenv\bin\7z]],
+        pkgconf = false,
+        git = "git",
+        ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64\cl.exe]],
+        unzip = false,
+        protoc = "protoc"
+    },
+    find_program_msvc_arch_x64_plat_windows_checktoolcxx = {
+        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64\cl.exe]]
+    },
+    find_programver_fetch_package_xmake = {
+        ["C:\\Program Files\\Git\\usr\\bin\\perl"] = "5.34.0",
         ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake"] = "3.25.1-msvc1"
     },
     find_programver = {
         ["D:\\Program Files\\xmake\\winenv\\bin\\curl"] = "7.85.0",
         ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe"] = "19.35.32215"
     },
-    find_programver_fetch_package_xmake = {
-        ["C:\\Program Files\\Git\\usr\\bin\\perl"] = "5.34.0",
+    find_programver_fetch_package_system = {
         ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake"] = "3.25.1-msvc1"
+    },
+    find_package_windows_x64_fetch_package_system = {
+        abseil_b35a76ee5b4b43b1b4ec8048d08e311d_release_external = false
     },
     find_program_fetch_package_system = {
         cmake = [[C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake]]
     },
-    find_program = {
-        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64\cl.exe]],
-        ["7z"] = [[D:\Program Files\xmake\winenv\bin\7z]],
-        gzip = false,
-        ping = "ping",
-        ["pkg-config"] = false,
-        unzip = false,
-        curl = [[D:\Program Files\xmake\winenv\bin\curl]],
-        pkgconf = false,
-        git = "git"
-    },
-    find_program_fetch_package_xmake = {
-        cmake = [[C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake]],
-        nasm = false,
-        perl = [[C:\Program Files\Git\usr\bin\perl]]
+    ["detect.sdks.find_vcpkgdir"] = false,
+    find_program_msvc_arch_x64_plat_windows_checktoolcc = {
+        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64\cl.exe]]
     },
     find_package_windows_x64_fetch_package_xmake = {
-        ["xmake::abseil_b35a76ee5b4b43b1b4ec8048d08e311d_release_20230125.2_external"] = false,
         ["xmake::openssl_208b1be7996a46f6bcdec073e1ba7562_release_1.1.1-t_external"] = false,
         ["xmake::protobuf-cpp_40d757936bc144f39393076580ce777d_release_3.19.4_external"] = {
-            sysincludedirs = {
-                [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\include]]
-            },
             static = true,
             linkdirs = {
                 [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\lib]]
@@ -47,12 +63,16 @@
             links = {
                 "libprotobuf"
             },
+            sysincludedirs = {
+                [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\include]]
+            },
             libfiles = {
                 [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\lib\libprotobuf.lib]],
                 [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\lib\libprotobuf-lite.lib]],
                 [[C:\Users\SaeruHikari\AppData\Local\.xmake\packages\p\protobuf-cpp\3.19.4\40d757936bc144f39393076580ce777d\lib\libprotoc.lib]]
             },
             version = "3.19.4"
-        }
+        },
+        ["xmake::abseil_b35a76ee5b4b43b1b4ec8048d08e311d_release_20230125.2_external"] = false
     }
 }
