@@ -420,6 +420,12 @@ target("steamwebrtc")
     if is_plat("windows") then
         add_defines("WEBRTC_WIN", "NOMINMAX", "WIN32_LEAN_AND_MEAN", "_WINSOCKAPI_")
         add_cxflags("/wd4715", "/wd4005", "/wd4996", "/wd4530")
+    elseif is_plat("macosx") then
+        add_ldflags("-Wl", "--no-undefined")
+        add_defines("WEBRTC_POSIX", "WEBRTC_MAC")
+    elseif is_plat("iphoneos") then
+        add_ldflags("-Wl", "--no-undefined")
+        add_defines("WEBRTC_POSIX", "WEBRTC_IOS", "WEBRTC_MAC")
     else
         add_ldflags("-Wl", "--no-undefined")
         add_defines("WEBRTC_POSIX", "WEBRTC_LINUX")
@@ -432,6 +438,7 @@ target("steamwebrtc")
 
 target("gns") -- we need limit path length
     set_kind("shared")
+    add_defines("STEAMNETWORKINGSOCKETS_FOREXPORT")
 
     add_vectorexts("sse2")
     add_packages("protobuf-cpp", "openssl")
@@ -449,12 +456,6 @@ target("gns") -- we need limit path length
         add_defines("STEAMWEBRTC_USE_STATIC_LIBS", "STEAMNETWORKINGSOCKETS_ENABLE_ICE")
         add_deps("steamwebrtc")
         add_packages("abseil")
-    end
-
-    if is_kind("shared") then
-        add_defines("STEAMNETWORKINGSOCKETS_FOREXPORT")
-    else
-        add_defines("STEAMNETWORKINGSOCKETS_STATIC_LINK", "OPENSSL_USE_STATIC_LIBS")
     end
 
     add_defines("STEAMNETWORKINGSOCKETS_CRYPTO_25519_OPENSSL",
