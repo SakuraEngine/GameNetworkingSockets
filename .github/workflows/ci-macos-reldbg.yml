@@ -1,9 +1,9 @@
-name: macos-build-shipping
+name: macos-build-reldbg
 
 on: [push, pull_request]
   
 jobs:
- build-macos-shipping:
+ build-macos-reldbg:
     runs-on: macos-12
     steps:
     - uses: actions/checkout@v2
@@ -17,7 +17,7 @@ jobs:
       run: |
         xmake g -c
         xmake l setup.lua
-    - name: Shipping
+    - name: RelDbg
       run: |
         xmake f -m releasedbg -y --policies=build.ccache:n
         xmake -y -v

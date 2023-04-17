@@ -1,9 +1,9 @@
-name: windows-build-shipping
+name: windows-build-reldbg
 
 on: [push, pull_request]
   
 jobs:
- build-windows-shipping:
+ build-windows-reldbg:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
@@ -17,7 +17,7 @@ jobs:
       run: |
         xmake g -c
         xmake l setup.lua
-    - name: Shipping
+    - name: RelDbg
       run: |
         xmake f -m releasedbg --toolchain=msvc -c -y -v --policies=build.ccache:n
         xmake -y -v
